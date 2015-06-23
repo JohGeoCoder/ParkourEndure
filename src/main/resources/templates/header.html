@@ -1,6 +1,17 @@
-<div th:fragment="headerModule" class="header">
-	<script th:src="@{/js/jquery/jquery-2.1.4.min.js}"></script>
-	<script th:src="@{/js/bootstrap/js/bootstrap.min.js}"></script>
-
-	
+<div th:fragment="headerModule">
+	<script th:src="@{/js/header.js}"></script>
+	<div class="header">
+		<div id="pkEndureLogo"></div>
+		
+		<div class="menu">
+			<ul class="inline-list">
+				<li class="headerNav center-text" data-nav-target="home">Home</li>
+				<li class="headerNav center-text" data-nav-target="classes">Classes</li>
+				<li class="headerNav center-text" data-nav-target="privateLessons">Private Lessons</li>
+				<li class="headerNav center-text" data-nav-target="coaches">The Coaches</li>
+				<li class="headerNav center-text" data-nav-target="contact">Contact Us</li>
+			</ul>
+		</div>
+		
+	</div>	
 </div>

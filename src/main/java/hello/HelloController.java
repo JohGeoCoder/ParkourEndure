@@ -10,7 +10,7 @@ public class HelloController {
     @RequestMapping("/")
     public ModelAndView index() {
     	ModelAndView mv = new ModelAndView();
-    	mv.setViewName("hello");
+    	mv.setViewName("main");
     	return mv;
     }
     

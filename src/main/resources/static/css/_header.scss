@@ -1,0 +1,29 @@
+
+.header{
+	margin-top: 20px;
+	padding-left: 20px;
+	
+	#pkEndureLogo{
+		background-image: url("../img/ParkourEndure.png");
+		width: 434px;
+		height: 42px;
+		float: left;
+	}
+	
+	.menu{
+		float: left;
+	}
+	
+	.headerNav{
+		margin-left: 10px;
+		font-size: x-large;
+		display: inline-block;
+		width: 130px;
+	}
+	
+	.headerNav.selected{
+		font-weight: bold;
+		border-bottom: solid black 2px;
+	}
+	
+}
