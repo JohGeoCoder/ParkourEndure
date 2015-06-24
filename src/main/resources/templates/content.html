@@ -1,0 +1,23 @@
+<div th:fragment="contentModule">
+	<script th:src="@{/js/content.js}"></script>
+	
+	<div id="home">
+		<div th:include="home :: homeModule"></div>
+	</div>
+	
+	<div id="classes">
+		<div th:include="classes :: classesModule"></div>
+	</div>
+	
+	<div id="privateLessons">
+		<div th:include="privatelessons :: privateLessonsModule"></div>
+	</div>
+	
+	<div id="coaches">
+		<div th:include="coaches :: coachesModule"></div>
+	</div>
+	
+	<div id="contact">
+		<div th:include="contact :: contactModule"></div>
+	</div>
+</div>
