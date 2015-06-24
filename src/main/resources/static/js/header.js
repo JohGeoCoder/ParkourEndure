@@ -6,7 +6,6 @@
 				var targetTab = menuItem.data('nav-target');
 				updateActiveMenuItemByPageAttribute(targetTab);
 				
-				
 				displayTabContent(targetTab);
 				GlobalFunctions.updateUrlParameter("page", targetTab);
 			});

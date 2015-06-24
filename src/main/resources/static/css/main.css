@@ -3,7 +3,8 @@
   padding-left: 20px; }
   .header #pkEndureLogo {
     background-image: url("../img/ParkourEndure.png");
-    width: 434px;
+    background-repeat: no-repeat;
+    /*width: 434px;*/
     height: 42px; }
   .header .navbar-nav li {
     font-size: 1.5em; }
