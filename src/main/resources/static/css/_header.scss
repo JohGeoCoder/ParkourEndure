@@ -7,23 +7,12 @@
 		background-image: url("../img/ParkourEndure.png");
 		width: 434px;
 		height: 42px;
-		float: left;
 	}
 	
-	.menu{
-		float: left;
-	}
+	.navbar-nav{
 	
-	.headerNav{
-		margin-left: 10px;
-		font-size: x-large;
-		display: inline-block;
-		width: 130px;
+		li{
+			font-size: 1.5em;
+		}
 	}
-	
-	.headerNav.selected{
-		font-weight: bold;
-		border-bottom: solid black 2px;
-	}
-	
 }

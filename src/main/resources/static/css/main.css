@@ -4,23 +4,17 @@
   .header #pkEndureLogo {
     background-image: url("../img/ParkourEndure.png");
     width: 434px;
-    height: 42px;
-    float: left; }
-  .header .menu {
-    float: left; }
-  .header .headerNav {
-    margin-left: 10px;
-    font-size: x-large;
-    display: inline-block;
-    width: 125px; }
-  .header .headerNav.selected {
-    font-weight: bold;
-    border-bottom: solid black 2px; }
+    height: 42px; }
+  .header .navbar-nav li {
+    font-size: 1.5em; }
 
 body, p, div, span, h1, h2, h3, h4, h5, h6, input, form, a, ul, li {
   margin: 0px;
   padding: 0px;
   font-family: sans-serif; }
+
+#main-wrapper {
+  margin: 0 auto; }
 
 .inline-list li {
   text-decoration: none;

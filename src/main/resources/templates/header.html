@@ -1,17 +1,30 @@
 <div th:fragment="headerModule">
 	<script th:src="@{/js/header.js}"></script>
 	<div class="header">
-		<div id="pkEndureLogo"></div>
+		<div id="pkEndureLogo" class="hidden-xs col-xs-12"></div>
 		
-		<div class="menu">
-			<ul class="inline-list">
-				<li class="headerNav center-text" data-nav-target="home">Home</li>
-				<li class="headerNav center-text" data-nav-target="classes">Classes</li>
-				<li class="headerNav center-text" data-nav-target="privateLessons">Private Lessons</li>
-				<li class="headerNav center-text" data-nav-target="coaches">The Coaches</li>
-				<li class="headerNav center-text" data-nav-target="contact">Contact Us</li>
-			</ul>
-		</div>
+		<nav class="navbar navbar-inverse col-xs-12">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsingNavbar">
+						<span class="sr-only">Toggle Navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand hidden-sm hidden-md hidden-lg" href="#">Parkour<strong>ENDURE</strong></a>
+				</div>
+				<div class="collapse navbar-collapse" id="collapsingNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active" data-nav-target="home"><a href="#">Home</a></li>
+						<li class="" data-nav-target="classes"><a href="#">Classes</a></li>
+						<li class="" data-nav-target="privateLessons"><a href="#">Private Lessons</a></li>
+						<li class="" data-nav-target="coaches"><a href="#">The Coaches</a></li>
+						<li class="" data-nav-target="contact"><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 		
 	</div>	
 </div>
