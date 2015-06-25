@@ -1,20 +1,18 @@
 (function() {
-	var header = function(){
-		var init = function(){
-			$('.header .navbar-nav li').on('click', function(){
-				var menuItem = $(this);
-				var targetTab = menuItem.data('nav-target');
-				updateActiveMenuItemByPageAttribute(targetTab);
+	var Header = function(){
+		var init = function(){			
+			$('[data-nav-target]').on('click', function(){
+				var navItem = $(this);
+				var targetPage = navItem.data('nav-target');
 				
-				displayTabContent(targetTab);
-				GlobalFunctions.updateUrlParameter("page", targetTab);
+				navigateToTab(targetPage);
 			});
 			
 			openTabFromUrl();
 		};
 		
 		var openTabFromUrl = function(){
-			var page = GlobalFunctions.getUrlParameter("page");
+			var page = getUrlParameter("page");
 			if(!page){
 				page = "home";
 			}
@@ -33,13 +31,40 @@
 			$("[data-nav-target='" + sPage + "']").addClass('active');
 		};
 		
-		return{
-			init:init
+		var navigateToTab = function(sTargetPage){
+			updateActiveMenuItemByPageAttribute(sTargetPage);
+			
+			displayTabContent(sTargetPage);
+			updateUrlParameter("page", sTargetPage);
 		};
-	}();
+		
+		var getUrlParameter = function(sParam){
+		    var sPageURL = window.location.search.substring(1);
+		    var sURLVariables = sPageURL.split('&');
+		    for (var i = 0; i < sURLVariables.length; i++) 
+		    {
+		        var sParameterName = sURLVariables[i].split('=');
+		        if (sParameterName[0] == sParam) 
+		        {
+		            return sParameterName[1];
+		        }
+		    }
+		};
+		
+		var updateUrlParameter = function(sParam, sValue){			
+			var newQueryString = $.query.SET(sParam, sValue).toString();
+			window.history.pushState(null, null, newQueryString);
+		}
+		
+		return{
+			init:init,
+			navigateToTab:navigateToTab
+		};
+	};
 	
 	$(function() {
-		header.init();
+		HeaderNavigation = Header();
+		HeaderNavigation.init();
 	});
 	
 })();

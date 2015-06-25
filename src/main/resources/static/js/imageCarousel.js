@@ -1,5 +1,5 @@
 (function() {
-	var header = function(){
+	var imageCarousel = function(){
 		var init = function(){
 			$('.image-carousel').slick({
 
@@ -9,10 +9,11 @@
 		return{
 			init:init
 		};
-	}();
+	};
 	
 	$(function() {
-		header.init();
+		ImageCarousel = imageCarousel();
+		ImageCarousel.init();
 	});
 	
 })();

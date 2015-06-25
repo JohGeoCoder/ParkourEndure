@@ -27,6 +27,11 @@ body {
   margin: 0 auto;
   background-color: #F2F2F2; }
 
+#content {
+  color: #EEE; }
+  #content strong {
+    font-size: 1.2em; }
+
 .inline-list li {
   text-decoration: none;
   display: inline; }
