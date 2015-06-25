@@ -4,10 +4,6 @@
 			$('.image-carousel').slick({
 
 			});
-			
-//			$('.carouselContainer').imageCarousel({
-//	           transitionType: "slider" //OPTIONS GO IN HERE
-//	       });
 		};
 		
 		return{

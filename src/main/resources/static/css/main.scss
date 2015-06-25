@@ -1,6 +1,7 @@
 $blue-primary: #004EB2 rgb(0, 78, 178);
 
 @import 'header';
+@import 'home';
 
 body,p,div,span,h1,h2,h3,h4,h5,h6,input,form,a,ul,li{
 	margin: 0px;
@@ -8,8 +9,18 @@ body,p,div,span,h1,h2,h3,h4,h5,h6,input,form,a,ul,li{
 	font-family: sans-serif;
 }
 
-#main-wrapper{
+body{
+	background-image: url("../img/mochaGrunge.png");
+}
+
+.main-section{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+#header-wrapper{
 	margin: 0 auto;
+	background-color: #F2F2F2;
 }
 
 .inline-list{
@@ -45,82 +56,6 @@ body,p,div,span,h1,h2,h3,h4,h5,h6,input,form,a,ul,li{
 	right: 0px;
 }
 
-@mixin vendorPrefix($name, $argument) {
-   -webkit-#{$name}: #{$argument};
-   -khtml-#{$name}: #{$argument};
-   -ms-#{$name}: #{$argument};
-   -moz-#{$name}: #{$argument};
-   -o-#{$name}: #{$argument};
-   #{$name}: #{$argument};
-}
-
-@mixin transition($properties...) {
-   @if length($properties) >= 1 {
-       @include vendorPrefix('transition', $properties);
-   } @else {
-       @include vendorPrefix('transition', $what: all, $length: 1s, $easing: ease-in-out);
-   }
-}
-
-@mixin rotate($degrees: 0deg) {
-   @include vendorPrefix(transform, rotate($degrees));
-}
-
-.homePageCarouselContainer {
-    position: relative;
-    z-index: 200;
-
-    .carouselPlacementWrapper {
-        height: 500px;
-        min-width: 1024px;
-        max-width: 1440px;
-        overflow: hidden;
-        margin: 0 auto;
-
-      .slideContainer {
-        max-width:1440px;
-        position:relative;
-        top: 0;
-        left:50%;
-        margin-left:-720px;
-        .imageSlide, .carouselLoader {
-          width: 100%;
-          position: absolute;
-          img {
-            display:block;
-            margin: 0 auto;
-          }
-        }
-      }
-        .carouselControl {
-                background: #111;
-                color: #DDD;
-                height: 60px;
-                padding: 17px 19px;
-                position: absolute;
-                top: 50%;
-                cursor: pointer;
-                z-index: 3;
-                @include transition(all, 0.3s);
-
-                &:before {
-                  font-size: 30px;
-                }
-
-                &:hover {
-                  background: #AAA;
-                }
-
-                display: none;
-        }
-
-        .carouselBack {
-            left: 0;
-            @include rotate(-180deg);
-        }
-
-        .carouselNext {
-            right: 0;
-        }
-    }
+ul.plain{
+	list-style-type: none;
 }

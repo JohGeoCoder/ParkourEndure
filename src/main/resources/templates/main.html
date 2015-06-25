@@ -14,15 +14,15 @@
 	<script th:src="@{/css/bootstrap/js/bootstrap.min.js}"></script>
 	<script th:src="@{/js/jquery.query-object.js}"></script>
 	
-	<div id="main-wrapper">
+	<div id="header-wrapper" class="main-section col-xs-12">
 		<div th:include="header :: headerModule"></div>
 	</div>
 	
-	<div id="image-carousel">
+	<div id="image-carousel" class="main-section col-xs-12">
 		<div th:include="imageCarousel :: imageCarouselModule"></div>
 	</div>
 	
-	<div id="content">
+	<div id="content" class="main-section col-xs-12">
 		<div th:include="content :: contentModule"></div>
 	</div>
 	
