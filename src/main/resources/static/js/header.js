@@ -15,6 +15,10 @@
 		
 		var openTabFromUrl = function(){
 			var page = GlobalFunctions.getUrlParameter("page");
+			if(!page){
+				page = "home";
+			}
+			
 			updateActiveMenuItemByPageAttribute(page)
 			displayTabContent(page);
 		};
