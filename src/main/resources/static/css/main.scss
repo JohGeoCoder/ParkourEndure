@@ -22,3 +22,105 @@ body,p,div,span,h1,h2,h3,h4,h5,h6,input,form,a,ul,li{
 .center-text{
 	text-align: center;
 }
+
+.center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.carousel-container{
+	width: 600px;
+	height: 200px;
+	position: relative;
+	background-color: white;
+}
+
+.carousel-background{
+	position: absolute;
+	background-color: black;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+}
+
+@mixin vendorPrefix($name, $argument) {
+   -webkit-#{$name}: #{$argument};
+   -khtml-#{$name}: #{$argument};
+   -ms-#{$name}: #{$argument};
+   -moz-#{$name}: #{$argument};
+   -o-#{$name}: #{$argument};
+   #{$name}: #{$argument};
+}
+
+@mixin transition($properties...) {
+   @if length($properties) >= 1 {
+       @include vendorPrefix('transition', $properties);
+   } @else {
+       @include vendorPrefix('transition', $what: all, $length: 1s, $easing: ease-in-out);
+   }
+}
+
+@mixin rotate($degrees: 0deg) {
+   @include vendorPrefix(transform, rotate($degrees));
+}
+
+.homePageCarouselContainer {
+    position: relative;
+    z-index: 200;
+
+    .carouselPlacementWrapper {
+        height: 500px;
+        min-width: 1024px;
+        max-width: 1440px;
+        overflow: hidden;
+        margin: 0 auto;
+
+      .slideContainer {
+        max-width:1440px;
+        position:relative;
+        top: 0;
+        left:50%;
+        margin-left:-720px;
+        .imageSlide, .carouselLoader {
+          width: 100%;
+          position: absolute;
+          img {
+            display:block;
+            margin: 0 auto;
+          }
+        }
+      }
+        .carouselControl {
+                background: #111;
+                color: #DDD;
+                height: 60px;
+                padding: 17px 19px;
+                position: absolute;
+                top: 50%;
+                cursor: pointer;
+                z-index: 3;
+                @include transition(all, 0.3s);
+
+                &:before {
+                  font-size: 30px;
+                }
+
+                &:hover {
+                  background: #AAA;
+                }
+
+                display: none;
+        }
+
+        .carouselBack {
+            left: 0;
+            @include rotate(-180deg);
+        }
+
+        .carouselNext {
+            right: 0;
+        }
+    }
+}
