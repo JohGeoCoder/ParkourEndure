@@ -29,6 +29,13 @@ body{
 	strong{
 		font-size: 1.2em;
 	}
+	
+	a{
+		color: #1E3447 !important;
+		font-weight: bold;
+		text-decoration: underline !important;
+		cursor: pointer;
+	}
 }
 
 .inline-list{

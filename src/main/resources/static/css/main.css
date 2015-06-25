@@ -31,6 +31,11 @@ body {
   color: #EEE; }
   #content strong {
     font-size: 1.2em; }
+  #content a {
+    color: #1E3447 !important;
+    font-weight: bold;
+    text-decoration: underline !important;
+    cursor: pointer; }
 
 .inline-list li {
   text-decoration: none;
