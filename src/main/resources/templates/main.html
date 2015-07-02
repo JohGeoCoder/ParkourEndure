@@ -3,26 +3,27 @@
 
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="/css/main.css"></link>
-	<link rel="stylesheet" href="/css/bootstrap/css/bootstrap.min.css"></link>
 	<link rel="stylesheet" href="/js/slick/slick.css"></link>
 	<link rel="stylesheet" href="/js/slick/slick-theme.css"></link>
+	<link rel="stylesheet" href="/js/foundation/css/foundation.css"></link>
+	<link rel="stylesheet" href="/js/foundation/css/normalize.css"></link>
 
 </head>
-<body>
+<body id="background">
 	<script th:src="@{/js/jquery-2.1.4.min.js}"></script>
 	<script th:src="@{/js/main.js}"></script>
-	<script th:src="@{/css/bootstrap/js/bootstrap.min.js}"></script>
 	<script th:src="@{/js/jquery.query-object.js}"></script>
+	<script th:src="@{/js/foundation/js/foundation/foundation.js}"></script>
 	
-	<div id="header-wrapper" class="main-section col-xs-12">
+	<div id="header-wrapper" class="main-section small-12">
 		<div th:include="header :: headerModule"></div>
 	</div>
 	
-	<div id="image-carousel" class="main-section col-xs-12">
+	<div id="carousel-section" class="main-section small-12">
 		<div th:include="imageCarousel :: imageCarouselModule"></div>
 	</div>
 	
-	<div id="content" class="main-section col-xs-12">
+	<div id="content" class="main-section small-12">
 		<div th:include="content :: contentModule"></div>
 	</div>
 	

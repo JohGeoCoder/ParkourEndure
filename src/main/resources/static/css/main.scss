@@ -9,7 +9,7 @@ body,p,div,span,h1,h2,h3,h4,h5,h6,input,form,a,ul,li{
 	font-family: sans-serif;
 }
 
-body{
+#background {
 	background-image: url("../img/mochaGrunge.png");
 }
 
@@ -55,20 +55,15 @@ body{
 	margin-right: auto;
 }
 
-.carousel-container{
+.image-carousel{
 	width: 600px;
 	height: 200px;
 	position: relative;
 	background-color: white;
 }
 
-.carousel-background{
-	position: absolute;
+.carousel-wrapper{
 	background-color: black;
-	top: 0px;
-	left: 0px;
-	bottom: 0px;
-	right: 0px;
 }
 
 ul.plain{
