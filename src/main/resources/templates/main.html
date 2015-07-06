@@ -14,18 +14,20 @@
 	<script th:src="@{/js/main.js}"></script>
 	<script th:src="@{/js/jquery.query-object.js}"></script>
 	<script th:src="@{/js/foundation/js/foundation/foundation.js}"></script>
+	<script th:src="@{/js/foundation/js/foundation/foundation.offcanvas.js}"></script>
+	<script th:src="@{/js/foundation/js/foundation/foundation.topbar.js}"></script>
 	
-	<div id="header-wrapper" class="main-section small-12">
-		<div th:include="header :: headerModule"></div>
+	<div id="canvas-wrapper" class="main-section small-12">
+		<div th:include="canvas :: canvasModule"></div>
 	</div>
 	
-	<div id="carousel-section" class="main-section small-12">
-		<div th:include="imageCarousel :: imageCarouselModule"></div>
-	</div>
+<!-- 	<div id="carousel-section" class="main-section medium-12 large-12 show-for-medium-up"> -->
+<!-- 		<div th:include="imageCarousel :: imageCarouselModule"></div> -->
+<!-- 	</div> -->
 	
-	<div id="content" class="main-section small-12">
-		<div th:include="content :: contentModule"></div>
-	</div>
+<!-- 	<div id="content" class="main-section small-12"> -->
+<!-- 		<div th:include="content :: contentModule"></div> -->
+<!-- 	</div> -->
 	
 </body>
 </html>

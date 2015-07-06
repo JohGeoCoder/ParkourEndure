@@ -1,6 +1,8 @@
 */target/
 target/
 *.class
+*.scssc
+*.css.map
 .settings/
 .project
 .classpath

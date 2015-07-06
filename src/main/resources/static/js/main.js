@@ -1,7 +1,7 @@
 (function() {
 	var FunctionContainer = function(){
 		var init = function(){
-			
+			$(document).foundation();
 		};
 		
 		return{
@@ -11,6 +11,7 @@
 	
 	$(function() {
 		GlobalFunctions = FunctionContainer();
+		GlobalFunctions.init();
 	});
 	
 })();

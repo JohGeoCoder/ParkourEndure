@@ -27,8 +27,8 @@
 		};
 		
 		var updateActiveMenuItemByPageAttribute = function(sPage){
-			$('.header .navbar-nav li').removeClass('active');
-			$("[data-nav-target='" + sPage + "']").addClass('active');
+			$('.canvas .top-bar-section li').removeClass('active');
+			$(".canvas .top-bar-section [data-nav-target='" + sPage + "']").addClass('active');
 		};
 		
 		var navigateToTab = function(sTargetPage){
