@@ -35,6 +35,8 @@ body, p, div, span, h1, h2, h3, h4, h5, h6, input, form, a, ul, li {
 
 #content {
   color: #EEE; }
+  #content h1, #content h2, #content h3, #content h4, #content h5, #content h6 {
+    color: #EEE; }
   #content strong {
     font-size: 1.2em; }
   #content a {
@@ -63,6 +65,16 @@ body, p, div, span, h1, h2, h3, h4, h5, h6, input, form, a, ul, li {
 
 .carousel-wrapper {
   background-color: black; }
+  .carousel-wrapper .slick-slide {
+    position: relative; }
+    .carousel-wrapper .slick-slide .carousel-text {
+      position: absolute;
+      width: 70%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      .carousel-wrapper .slick-slide .carousel-text .attribution {
+        text-align: right; }
 
 ul.plain {
   list-style-type: none; }

@@ -38,6 +38,10 @@ body,p,div,span,h1,h2,h3,h4,h5,h6,input,form,a,ul,li{
 #content{
 	color: #EEE;
 	
+	h1, h2, h3, h4, h5, h6{
+		color: #EEE;
+	}
+	
 	strong{
 		font-size: 1.2em;
 	}
@@ -76,6 +80,23 @@ body,p,div,span,h1,h2,h3,h4,h5,h6,input,form,a,ul,li{
 
 .carousel-wrapper{
 	background-color: black;
+	
+	.slick-slide{
+		position: relative;
+		
+		.carousel-text{
+			position: absolute;
+			width: 70%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			
+			.attribution{
+				text-align: right;
+			}
+		}
+	}
+	
 }
 
 ul.plain{
