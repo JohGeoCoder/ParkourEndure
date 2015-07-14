@@ -44,6 +44,8 @@ body, p, div, span, h1, h2, h3, h4, h5, h6, input, form, a, ul, li {
     font-weight: bold;
     text-decoration: underline !important;
     cursor: pointer; }
+  #content #coaches .coach {
+    margin-bottom: 20px; }
 
 .inline-list li {
   text-decoration: none;

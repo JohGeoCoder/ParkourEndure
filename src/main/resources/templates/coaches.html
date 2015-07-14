@@ -1,24 +1,33 @@
 <div th:fragment="coachesModule">
 	<script th:src="@{/js/coaches.js}"></script>
 	
-	
-	<div id="coaches" class="small-12">
-		<div class="coach small-12 medium-4 columns">
-			<h3 class="coach-name text-center">John George</h3>
-			<div class="image-container hide-for-small-only">
-				<img class="center" src="img/pkCoachJohn.png"></img>
-			</div>
-			<div class="image-container show-for-small-only">
-				<img class="center small-6" src="img/pkCoachJohn.png"></img>
-			</div>
+	<div id="coaches" class="small-12" ng-app="myApp" ng-controller="coachController">
+		<p class="text-center show-for-medium-down">Press on an image for more details about the coach</p>
+		
+		<div class="coach small-12 medium-4 columns" ng-repeat="coach in coaches">
+			<h3 class="text-center">{{ coach.firstName + " " + coach.lastName }}</h3>
+			<a href="#" data-reveal-id="coachModal" ng-click="setSelected($index)">
+				<div class="image-container hide-for-small-only">
+					<img class="center" src="{{coach.imageUrl}}"></img>
+				</div>
+				<div class="image-container show-for-small-only">
+					<img class="center small-6" src="{{coach.imageUrl}}"></img>
+				</div>
+			</a>
 			<div class="coach-description text-justify">
-				<p>
-					John began practicing parkour in 2005 when parkour coaching in the United States was almost non-existent.
-					He began coaching in 2009 during his time at Bloomsburg University of Pennsylvania, and earned his 
-					Level 1 ADAPT coaching qualification in 2011. In 2015 John took the intensive 5-day Level 2 ADAPT coaching
-					qualification, and is actively training for the Level 2 assessments.
+				<p class="show-for-large-up">
+					{{coach.details}}
 				</p>
 			</div>
 		</div>
-	</div>
+		
+		<div id="coachModal" class="reveal-modal medium" data-reveal="">
+			<h3>{{coaches[selected].firstName + " " + coaches[selected].lastName}}</h3>
+			<div class="image-container">
+				<img class="center small-6" src="{{coaches[selected].imageUrl}}"></img>
+			</div>
+			<p>{{coaches[selected].details}}</p>
+			<a class="close-reveal-modal" aria-label="Close">&#215;</a>
+		</div>
+	</div>	
 </div>
