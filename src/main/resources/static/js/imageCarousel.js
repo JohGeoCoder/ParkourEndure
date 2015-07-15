@@ -20,8 +20,7 @@
 		ImageCarousel.init();
 	});
 	
-	var app = angular.module('imageCarouselApp', []);
-	app.controller('carouselController', function($scope){
+	ParkourEndureApp.controller('carouselController', function($scope){
 		$scope.carouselItems = [
 		    {
 		    	type:'Q',
