@@ -14,11 +14,7 @@
 	});
 	
 	ParkourEndureApp.controller('coachController', function($scope) {
-		$scope.selected = 0;
-		
-		$scope.setSelected = function(selected) {
-			$scope.selected = selected;
-		}
+		$scope.selected = {index:0};
 		
 	    $scope.coaches = [
 	        {
