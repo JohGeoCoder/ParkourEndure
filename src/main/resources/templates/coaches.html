@@ -4,6 +4,7 @@
 	<div id="coaches" class="small-12" ng-app="myApp" ng-controller="coachController">
 		<p class="text-center show-for-medium-down">Press on an image for more details about the coach</p>
 		
+		<!-- The list of coaches -->
 		<div class="coach small-12 medium-4 columns" ng-repeat="coach in coaches">
 			<h3 class="text-center">{{ coach.firstName + " " + coach.lastName }}</h3>
 			<a href="#" data-reveal-id="coachModal" ng-click="setSelected($index)">
@@ -21,6 +22,7 @@
 			</div>
 		</div>
 		
+		<!-- The shared modal to display coach information -->
 		<div id="coachModal" class="reveal-modal medium" data-reveal="">
 			<h3>{{coaches[selected].firstName + " " + coaches[selected].lastName}}</h3>
 			<div class="image-container">
