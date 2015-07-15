@@ -2,27 +2,19 @@
 	<script th:src="@{/js/slick/slick.js}"></script>
 	<script th:src="@{/js/imageCarousel.js}"></script>
 
-	<div class="small-12 medium-12 large-12">
+	<div class="small-12 medium-12 large-12" ng-app="imageCarouselApp" ng-controller="carouselController">
 		<div class="carousel-wrapper">
 			<div class="image-carousel center">
-		        <div>
-		        	<div class="carousel-text">
-		        		<p class="quote">"You don't stop running because you get old, you get old because you stop running."</p>
-						<p class="attribution">- Christopher McDougall</p>
-		        	</div>
+				<!-- The list of carousel objects -->
+				<div ng-repeat="item in carouselItems">
+					<div class="carousel-text" ng-if="item.type == 'Q'">
+						<p class="quote">{{item.quote}}</p>
+						<p class="attribution">{{item.attribution}}</p>
+					</div>
+					<div class="carousel-image" ng-if="item.type == 'I'">
+						<img src="{{item.imageUrl}}" />
+					</div>
 				</div>
-		        <div>
-		        	<div class="carousel-text">
-			        	<p class="quote">"Once you learn Parkour's basic moves, the world around you changes"</p>
-			        	<p class="attribution">- Christopher McDougall</p>
-		        	</div>
-		        </div>
-		        <div>
-		        	<div class="carousel-text">
-			        	<p class="quote">"Whether you're a beginner or have been in the trenches for years, your primary goal as far as physical training goes should be to become stronger."</p>
-			        	<p class="attribution">- Chris Rowat</p>
-		        	</div>
-		        </div>
 		    </div>
 		</div>
 	</div>

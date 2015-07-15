@@ -13,7 +13,7 @@
 		header.init();
 	});
 	
-	var app = angular.module('myApp', []);
+	var app = angular.module('coachesApp', []);
 	app.controller('coachController', function($scope) {
 		$scope.selected = 0;
 		
