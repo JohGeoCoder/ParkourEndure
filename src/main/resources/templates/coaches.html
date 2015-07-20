@@ -5,20 +5,19 @@
 		<p class="text-center show-for-medium-down">Press on an image for more details about the coach</p>
 		
 		<!-- The list of coaches -->
-		<div class="coach small-12 medium-4 columns" ng-repeat="coach in coaches">
-			<h3 class="text-center">{{ coach.firstName + " " + coach.lastName }}</h3>
-			<a href="#" data-reveal-id="coachModal" ng-click="selected.index = $index">
+		<div class="coach small-12 medium-4 columns" th:each="coach,status : ${coaches}" th:inline="text">
+			<h3 class="text-center" th:text="${coach.getFullName()}"></h3>
+			<a href="#" data-reveal-id="coachModal" th:attr="ng-click=#{ng.click.attr(${status.index})}">
+				[[${coach.getFullName()}]]
 				<div class="image-container hide-for-small-only">
-					<img class="center" ng-src="{{coach.imageUrl}}"></img>
+					<img class="center" th:src="${coach.imageUrl}"></img>
 				</div>
 				<div class="image-container show-for-small-only">
-					<img class="center small-6" ng-src="{{coach.imageUrl}}"></img>
+					<img class="center small-6" th:src="${coach.imageUrl}"></img>
 				</div>
 			</a>
 			<div class="coach-description text-justify">
-				<p class="show-for-large-up">
-					{{coach.details}}
-				</p>
+				<p class="show-for-large-up" th:text="${coach.details}"></p>
 			</div>
 		</div>
 		

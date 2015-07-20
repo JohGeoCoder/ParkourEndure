@@ -6,6 +6,10 @@ public class Coach {
 	private String imageUrl;
 	private String details;
 	
+	public String getFullName(){
+		return getFirstName() + " " + getLastName();
+	}
+	
 	public String getFirstName() {
 		return firstName;
 	}
