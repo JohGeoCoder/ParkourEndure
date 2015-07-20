@@ -1,21 +1,18 @@
-package hello;
+package controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import models.CarouselItem;
+import model.CarouselItem;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ImageCarouselController {
+public class GlobalController {
 
-	@RequestMapping(value="carouselimages", method=RequestMethod.POST)
-	@ResponseBody
-	public List<CarouselItem> getCarouselImages(){
+	@ModelAttribute("carouselItems")
+	public List<CarouselItem> getCarouselItems(){
 		List<CarouselItem> items = new ArrayList<CarouselItem>();
 		
 		CarouselItem item1 = new CarouselItem();
