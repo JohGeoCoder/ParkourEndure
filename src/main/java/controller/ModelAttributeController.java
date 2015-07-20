@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-public abstract class GlobalController {
+public abstract class ModelAttributeController {
 
 	@ModelAttribute("carouselItems")
 	public List<CarouselItem> getCarouselItems(){
@@ -48,22 +48,13 @@ public abstract class GlobalController {
 		coach1.setImageUrl("img/pkCoachJohn.png");
 		coach1.setDetails("John began practicing parkour in 2005 when parkour coaching in the United States was almost non-existent. He began coaching in 2009 during his time at Bloomsburg University of Pennsylvania, and earned his Level 1 ADAPT coaching qualification in 2011. In 2015 John took the intensive 5-day Level 2 ADAPT coaching qualification, and is actively training for the Level 2 assessments.");
 		
-		Coach coach2 = new Coach();
-		coaches.add(coach2);
-		coach2.setFirstName("Java");
-		coach2.setLastName("Lava");
-		coach2.setImageUrl("img/pkCoachJohn.png");
-		coach2.setDetails("My loony bun is fine, Benny Lava");
+//		Coach coach2 = new Coach();
+//		coaches.add(coach2);
+//		coach2.setFirstName("Java");
+//		coach2.setLastName("Lava");
+//		coach2.setImageUrl("img/pkCoachJohn.png");
+//		coach2.setDetails("My loony bun is fine, Benny Lava");
 		
 		return coaches;
-	}
-	
-	@RequestMapping("/")
-    public ModelAndView index() {
-    	ModelAndView mv = new ModelAndView();
-    	mv.setViewName("main");
-    	return mv;
-    }
-	
-	
+	}	
 }
