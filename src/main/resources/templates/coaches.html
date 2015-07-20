@@ -8,7 +8,6 @@
 		<div class="coach small-12 medium-4 columns" th:each="coach,status : ${coaches}" th:inline="text">
 			<h3 class="text-center" th:text="${coach.getFullName()}"></h3>
 			<a href="#" data-reveal-id="coachModal" th:attr="ng-click=#{ng.click.attr(${status.index})}">
-				[[${coach.getFullName()}]]
 				<div class="image-container hide-for-small-only">
 					<img class="center" th:src="${coach.imageUrl}"></img>
 				</div>
