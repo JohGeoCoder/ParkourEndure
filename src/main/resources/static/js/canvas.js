@@ -9,6 +9,10 @@
 			});
 			
 			openTabFromUrl();
+			
+			$('.off-canvas-list li').on('click', function(){
+				$('.off-canvas-wrap').removeClass('move-right');
+			});
 		};
 		
 		var openTabFromUrl = function(){
