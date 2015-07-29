@@ -10,8 +10,8 @@
 			
 			openTabFromUrl();
 			
-			$('.off-canvas-list li').on('click', function(){
-				$('.off-canvas-wrap').removeClass('move-right');
+			$('.off-canvas-list li').on('click.toggleCanvas', function(){
+				$(".exit-off-canvas").click();
 			});
 		};
 		
